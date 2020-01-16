@@ -1,9 +1,5 @@
 from django.contrib import admin
-from .models import Order
-from .models import Client
-from .models import ProductDiscount
-from .models import Product
-from .models import Discount
+from .models import *
 
 admin.site.register(Order)
 admin.site.register(Client)

@@ -1,9 +1,9 @@
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+from django.contrib.auth.models import User
 
 class Order(models.Model):
     sum_total = models.IntegerField()
@@ -13,17 +13,14 @@ class Order(models.Model):
     class Meta:
         db_table = 'order'
 
-class Client(models.Model): #settings.AUTH_USER_MODEL
-    #id = models.AutoField(primary_key=True)
-    user = models.OneToOneField(User, on_delete=models.CASCADE)#, default = User.objects.create_user('arina', 'mypassw', 'arinae@mail.com'))
+class Client(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     full_name = models.CharField(max_length = 60)
     gender = models.CharField(max_length = 20, blank = True, null = True)
     address = models.CharField(max_length = 60)
     bank_card_id = models.BigIntegerField(null = True)
-    #e_mail = models.CharField(max_length = 40, null = True)
     status = models.CharField(max_length = 50)
     phone_number = models.BigIntegerField(null = True)
-    #password = models.CharField(max_length=30)
 
     class Meta:
         db_table = 'client'

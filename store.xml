@@ -1,0 +1,311 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Store>
+  <Client>
+    <id>106</id>
+    <full_name>Ненемыкин Глеб Александрович</full_name>
+    <gender>male</gender>
+    <address>г. Белгород, ул. Есенина, д.26, кв.19</address>
+    <bank_card_id>4758390183485938</bank_card_id>
+    <status>Новый</status>
+    <phone_number>89997385548</phone_number>
+    <user_id>65</user_id>
+  </Client>
+  <Client>
+    <id>112</id>
+    <full_name>Лемыкин Андрей Игоревич</full_name>
+    <gender>male</gender>
+    <address>г. Белгород, ул. Есенина, д.18, кв.141</address>
+    <bank_card_id>4758364747568493</bank_card_id>
+    <status>Новый</status>
+    <phone_number>89607483328</phone_number>
+    <user_id>72</user_id>
+  </Client>
+  <Client>
+    <id>108</id>
+    <full_name>Семыкин Егор Максимович</full_name>
+    <gender>male</gender>
+    <address>г. Белгород, ул. Есенина, д.40, кв.100</address>
+    <bank_card_id>4675478905436754</bank_card_id>
+    <status>Новый</status>
+    <phone_number>89046743460</phone_number>
+    <user_id>67</user_id>
+  </Client>
+  <Client>
+    <id>111</id>
+    <full_name>Ненемыкина Анна Сергеевна</full_name>
+    <gender>female</gender>
+    <address>г. Белгород, ул. Есенина, д.38, кв.12</address>
+    <bank_card_id>4758302947564837</bank_card_id>
+    <status>Новый</status>
+    <phone_number>89997462748</phone_number>
+    <user_id>70</user_id>
+  </Client>
+  <Client>
+    <id>109</id>
+    <full_name>Неныкина Надежда Николаевна</full_name>
+    <gender>female</gender>
+    <address>г. Белгород, ул. Есенина, д.51, кв.124</address>
+    <bank_card_id>4783630917253647</bank_card_id>
+    <status>Новый</status>
+    <phone_number>89064673847</phone_number>
+    <user_id>68</user_id>
+  </Client>
+  <Client>
+    <id>107</id>
+    <full_name>Кемыкин Данила Игоревич</full_name>
+    <gender>male</gender>
+    <address>г. Белгород, ул. Есенина, д.46, кв.104</address>
+    <bank_card_id>4678543678906425</bank_card_id>
+    <status>Новый</status>
+    <phone_number>89504675432</phone_number>
+    <user_id>66</user_id>
+  </Client>
+  <Client>
+    <id>110</id>
+    <full_name>Ненемыкина Мария Николаевна</full_name>
+    <gender>female</gender>
+    <address>г. Белгород, ул. Есенина, д.3, кв.12</address>
+    <bank_card_id>4567763890651234</bank_card_id>
+    <status>Новый</status>
+    <phone_number>89094736430</phone_number>
+    <user_id>69</user_id>
+  </Client>
+  <Client>
+    <id>1</id>
+    <full_name>Немыкина Алина Николаевна</full_name>
+    <gender>female</gender>
+    <address>г. Белгород, ул. Есенина, д.32, кв.1</address>
+    <bank_card_id>4783657483950382</bank_card_id>
+    <status>Постоянный</status>
+    <phone_number>89034756382</phone_number>
+    <user_id>1</user_id>
+  </Client>
+  <Order>
+    <id>1</id>
+    <sum_total>2000</sum_total>
+    <client_id_id>1</client_id_id>
+    <prod_id_id>2</prod_id_id>
+  </Order>
+  <Order>
+    <id>2</id>
+    <sum_total>20000</sum_total>
+    <client_id_id>1</client_id_id>
+    <prod_id_id>4</prod_id_id>
+  </Order>
+  <Order>
+    <id>3</id>
+    <sum_total>3000</sum_total>
+    <client_id_id>107</client_id_id>
+    <prod_id_id>9</prod_id_id>
+  </Order>
+  <Order>
+    <id>4</id>
+    <sum_total>3500</sum_total>
+    <client_id_id>107</client_id_id>
+    <prod_id_id>5</prod_id_id>
+  </Order>
+  <Order>
+    <id>5</id>
+    <sum_total>4000</sum_total>
+    <client_id_id>106</client_id_id>
+    <prod_id_id>8</prod_id_id>
+  </Order>
+  <Product>
+    <id>1</id>
+    <color>Чёрный</color>
+    <price>7000</price>
+    <availability>true</availability>
+    <pr_type>Пальто</pr_type>
+    <size>40</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>2</id>
+    <color>Розовый</color>
+    <price>2000</price>
+    <availability>true</availability>
+    <pr_type>Рубашка</pr_type>
+    <size>46</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>3</id>
+    <color>Красный</color>
+    <price>2000</price>
+    <availability>true</availability>
+    <pr_type>Свитер</pr_type>
+    <size>42</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>4</id>
+    <color>Серый</color>
+    <price>20000</price>
+    <availability>true</availability>
+    <pr_type>Шуба</pr_type>
+    <size>50</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>5</id>
+    <color>Голубой</color>
+    <price>3500</price>
+    <availability>true</availability>
+    <pr_type>Джинсы</pr_type>
+    <size>42</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>6</id>
+    <color>Зелёный</color>
+    <price>2000</price>
+    <availability>true</availability>
+    <pr_type>Шорты</pr_type>
+    <size>50</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>7</id>
+    <color>Бежевый</color>
+    <price>3000</price>
+    <availability>true</availability>
+    <pr_type>Юбка</pr_type>
+    <size>40</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>8</id>
+    <color>Серый</color>
+    <price>4000</price>
+    <availability>true</availability>
+    <pr_type>Комбинезон</pr_type>
+    <size>44</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>9</id>
+    <color>Лососевый</color>
+    <price>3000</price>
+    <availability>true</availability>
+    <pr_type>Джемпер</pr_type>
+    <size>44</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>10</id>
+    <color>Белый</color>
+    <price>3000</price>
+    <availability>true</availability>
+    <pr_type>Блуза</pr_type>
+    <size>40</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Product>
+    <id>11</id>
+    <color>Коричневый</color>
+    <price>6000</price>
+    <availability>true</availability>
+    <pr_type>Парка</pr_type>
+    <size>42</size>
+    <disc>store.Discount.None</disc>
+  </Product>
+  <Discount>
+    <id>1</id>
+    <percent>15</percent>
+    <discount_type>Сезонная</discount_type>
+  </Discount>
+  <ProductDiscount>
+    <id>1</id>
+    <prod_id>Рубашка</prod_id>
+    <disc_id>Сезонная</disc_id>
+    <exp_date>2020-03-31</exp_date>
+  </ProductDiscount>
+  <User>
+    <id>65</id>
+    <password>pbkdf2_sha256$180000$DtDKlMHLTv0R$73GO1VV8qgbqwRnCnyQvv7EkP16igXNwwPaTatvi0+k=</password>
+    <last_login>2020-01-09 19:42:55.264763+00:00</last_login>
+    <is_superuser>false</is_superuser>
+    <username>gleb</username>
+    <email>gleb@gmail.com</email>
+    <is_staff>false</is_staff>
+    <is_active>true</is_active>
+    <date_joined>2020-01-09 12:10:42.036683+00:00</date_joined>
+  </User>
+  <User>
+    <id>72</id>
+    <password>pbkdf2_sha256$180000$YSlTm4i2q7ri$CzgZsITCeIk/yPKA0GlAwIo7wR+0he2IWqYL+j9RTus=</password>
+    <last_login>2020-01-12 12:02:23.713002+00:00</last_login>
+    <is_superuser>false</is_superuser>
+    <username>andrey</username>
+    <email>andrey@gmail.com</email>
+    <is_staff>false</is_staff>
+    <is_active>true</is_active>
+    <date_joined>2020-01-11 13:04:24.418777+00:00</date_joined>
+  </User>
+  <User>
+    <id>67</id>
+    <password>pbkdf2_sha256$180000$nC6Uqf5sUFcW$v+isV75fqGunwbrIZoFg4ZA84iQTnZkAmEO/v0dLewY=</password>
+    <last_login>2020-01-12 12:02:31.084723+00:00</last_login>
+    <is_superuser>false</is_superuser>
+    <username>egor</username>
+    <email>egor@gmail.com</email>
+    <is_staff>false</is_staff>
+    <is_active>true</is_active>
+    <date_joined>2020-01-09 12:33:01.515873+00:00</date_joined>
+  </User>
+  <User xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>70</id>
+    <password>pbkdf2_sha256$180000$TjIGAnIJiaa6$yWk08k4qZo82m0yrFKK2Q21PSyP1KVqrZl+kXy9m7qA=</password>
+    <last_login xsi:nil="true"/>
+    <is_superuser>false</is_superuser>
+    <username>anna</username>
+    <email>anna@gmail.com</email>
+    <is_staff>false</is_staff>
+    <is_active>true</is_active>
+    <date_joined>2020-01-11 13:00:28.915830+00:00</date_joined>
+  </User>
+  <User xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>68</id>
+    <password>pbkdf2_sha256$180000$uUqdWwRRXWsj$QWJbs0cPxaZhrtgWeDN0qPl/ny7r7nzfQ3uDsyfMpuw=</password>
+    <last_login xsi:nil="true"/>
+    <is_superuser>false</is_superuser>
+    <username>nadezhda</username>
+    <email>nadezhda@gmail.com</email>
+    <is_staff>false</is_staff>
+    <is_active>true</is_active>
+    <date_joined>2020-01-09 18:26:13.251075+00:00</date_joined>
+  </User>
+  <User xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <id>69</id>
+    <password>pbkdf2_sha256$180000$1Zh29xWC0EjJ$llEq2ykiPZSCwnGLQnr7OzEi6F+LvZcP+oZkvIzIRWw=</password>
+    <last_login xsi:nil="true"/>
+    <is_superuser>false</is_superuser>
+    <username>maria</username>
+    <email>maria@gmail.com</email>
+    <is_staff>false</is_staff>
+    <is_active>true</is_active>
+    <date_joined>2020-01-11 12:58:10.198074+00:00</date_joined>
+  </User>
+  <User>
+    <id>1</id>
+    <password>pbkdf2_sha256$180000$uwdTPfTuM3Vy$ieMuTgm3OLB45SelGATK5owv41FPyOqoWcyd0eYqzvE=</password>
+    <last_login>2020-01-15 22:36:42.174426+00:00</last_login>
+    <is_superuser>true</is_superuser>
+    <username>alina</username>
+    <email>aalnemykina11400@gmail.com</email>
+    <is_staff>true</is_staff>
+    <is_active>true</is_active>
+    <date_joined>2020-01-06 01:33:37.456698+00:00</date_joined>
+  </User>
+  <User>
+    <id>66</id>
+    <password>pbkdf2_sha256$180000$4yKYGK4ujOd1$K6SbKzhiFshRZwXe3x3pl1Vlln+Ld+HNj/9xiFh6s2I=</password>
+    <last_login>2020-01-11 13:24:36.361564+00:00</last_login>
+    <is_superuser>false</is_superuser>
+    <username>danila</username>
+    <email>danila@gmail.com</email>
+    <is_staff>false</is_staff>
+    <is_active>true</is_active>
+    <date_joined>2020-01-09 12:29:49.280695+00:00</date_joined>
+  </User>
+</Store>

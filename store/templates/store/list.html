@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>NOUS - магазин</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>N O U S</h1>
+        <a href="{% url 'create_client' %}"> Зарегистрироваться </a>
+        <!--<a href="{% url 'create_client' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>-->        
+        <a href="{% url 'authent' %}"> Войти </a>
+        <a href="{% url 'order_new' %}"> Оформить заказ </a>
+        <a href="{% url 'orders' %}"> Моя корзина </a>
+        {% if user.is_staff %}
+            <a href="{% url 'add_product' %}"> Добавить товар </a>
+        {% endif %}
+        <h3>Товары</h3>
+        {% for prod in prods %}
+        <div>
+            <h4><a href="{% url 'prod_detail' pk=prod.pk %}">{{ prod }}</a></h4>
+        </div>
+        {% endfor %}
+    </body>
+</html>

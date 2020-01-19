@@ -1,16 +1,10 @@
-<html>
-    <head>
-        <title>NOUS. Оформление покупки</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    </head>
-    <body>
-        <h1>N O U S</h1>
-        <h3>Оформление покупки</h3>
-        <a href="{% url 'list' %}">Вернуться на главную страницу</a>
-        <h5>Выбирите товар</h5>
-        <form method="POST" class="order-form">{% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn btn-default">Купить</button>
-        </form>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Оформление покупки</h3>
+    <h5>Выбирите товар</h5>
+    <form method="POST" class="order-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Купить</button>
+    </form>
+{% endblock %}

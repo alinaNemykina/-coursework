@@ -1,22 +1,14 @@
-<html>
-    <head>
-        <title>Страница товара {{prod}}.Артикул:{{prod.pk}}</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    </head>
-    <body>
-        <h1>N O U S</h1>
-        <div>
-            <a href="{% url 'list' %}">Вернуться на главную страницу</a>
-            <h3>Информация о товаре</h3>
-            <h4>{{ prod }}</h4>
-            <h5>Цвет: {{ prod.color }}.
-            Размер: {{ prod.size }}
-            Цена: {{prod.price}}
-            {% if prod.availability is True %}
-                Есть в наличии
-            {% else %}
-                Нет в наличии
-            {% endif %}</h5>
-        </div>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Информация о товаре</h3>
+    <h4>{{ prod }}</h4>
+    <h5>Цвет: {{ prod.color }}.
+    Размер: {{ prod.size }}
+    Цена: {{prod.price}}
+    {% if prod.availability is True %}
+        Есть в наличии
+    {% else %}
+        Нет в наличии
+    {% endif %}</h5>
+{% endblock %}

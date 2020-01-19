@@ -1,32 +1,24 @@
-<html lang="en">
-    <head>
-        <title>NOUS. Аутентификация</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    </head>
-    <body>
-        <h1>N O U S</h1>
-        <a href="{% url 'list' %}">Вернуться на главную страницу</a>
-        <h3>Введите имя пользователя и пароль</h3>
-        <p>Please, use the following form to log-in:</p>
+{% extends "base.html" %}
 
-        <form method="post" action="{% url 'authent' %}">
-            {% csrf_token %}
-            <table>
-              
-                <tr>
-                  <td><h5>{{ form.username.label_tag }}</h5></td>
-                  <td>{{ form.username }}</td>
-                </tr>
-            
-                <tr>
-                  <td><h5>{{ form.password.label_tag }}</h5></td>
-                  <td>{{ form.password }}</td>
-                </tr>
-            </table>
-            
-            <input type="submit" value="Войти" />
-            <input type="hidden" name="next" value="{{ next }}" />
-            </form>
+{% block content %}
+    <h3>Введите имя пользователя и пароль</h3>
+    <p>Please, use the following form to log-in:</p>
 
-    </body>
-</html>
+    <form method="post" action="{% url 'authent' %}">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td><h5>{{ form.username.label_tag }}</h5></td>
+                <td>{{ form.username }}</td>
+            </tr>
+            
+            <tr>
+                <td><h5>{{ form.password.label_tag }}</h5></td>
+                <td>{{ form.password }}</td>
+            </tr>
+        </table>
+            
+        <input type="submit" value="Войти" />
+        <input type="hidden" name="next" value="{{ next }}" />
+        </form>
+{% endblock %}

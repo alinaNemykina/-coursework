@@ -1,51 +1,45 @@
-<html lang="en">
-    <head>
-        <title>NOUS. Аутентификация</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    </head>
-    <body>
-        <h1>N O U S</h1>
-        <a href="{% url 'list' %}">Вернуться на главную страницу</a>
-        <h3>Введите имя пользователя и пароль</h3>
+{% extends "base.html" %}
 
-        <font color="red">
-            {% if form.errors %}
-                <p>Имя пользователя и/или пароль были введены неверно. Попробуйте ещё раз.</font></p>
+{% block content %}
+    <h3>Введите имя пользователя и пароль</h3>
+
+    <font color="red">
+        {% if form.errors %}
+            <p>Имя пользователя и/или пароль были введены неверно. Попробуйте ещё раз.</font></p>
+        {% endif %}
+
+
+        {% if next %}
+            {% if user.is_authenticated %}
+                <p>Ваша учетная запись не имеет доступа к этой странице. Чтобы продолжить,
+                  пожалуйста, войдите в систему используя учетную запись, которая имеет доступ.</p>
+            {% else %}
+                <p>Пожалуйста, авторизируйтесь, чтобы увидеть эту страницу.</p>
             {% endif %}
+        {% endif %}
+      </font>
 
-
-            {% if next %}
-                {% if user.is_authenticated %}
-                    <p>Ваша учетная запись не имеет доступа к этой странице. Чтобы продолжить,
-                      пожалуйста, войдите в систему используя учетную запись, которая имеет доступ.</p>
-                {% else %}
-                    <p>Пожалуйста, авторизируйтесь, чтобы увидеть эту страницу.</p>
-                {% endif %}
-            {% endif %}
-          </font>
-
-        <form method="post" action="{% url 'authent' %}">
-          {% csrf_token %}
-          <table>
+    <form method="post" action="{% url 'authent' %}">
+      {% csrf_token %}
+      <table>
             
-              <tr>
-                <td><h5>{{ form.username.label_tag }}</h5></td>
-                <td>{{ form.username }}</td>
-              </tr>
+          <tr>
+            <td><h5>{{ form.username.label_tag }}</h5></td>
+            <td>{{ form.username }}</td>
+          </tr>
           
-              <tr>
-                <td><h5>{{ form.password.label_tag }}</h5></td>
-                <td>{{ form.password }}</td>
-              </tr>
-          </table>
+          <tr>
+            <td><h5>{{ form.password.label_tag }}</h5></td>
+            <td>{{ form.password }}</td>
+          </tr>
+      </table>
           
-          <input type="submit" value="Войти" />
-          <input type="hidden" name="next" value="{{ next }}" />
-          </form>
+      <input type="submit" value="Войти" />
+      <input type="hidden" name="next" value="{{ next }}" />
+      </form>
           
-          {# setup the password_reset view in URLconf #}
-          <p><a href="{% url 'password_reset' %}">Забыли пароль?</a></p>
+      {# setup the password_reset view in URLconf #}
+      <p><a href="{% url 'password_reset' %}">Забыли пароль?</a></p>
           
-        </form>
-    </body>
-</html>
+    </form>
+{% endblock %}

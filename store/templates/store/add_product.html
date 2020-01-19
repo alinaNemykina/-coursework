@@ -1,53 +1,47 @@
-<html>
-    <head>
-        <title>NOUS. Добавление товара</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    </head>
-    <body>
-        <h1>N O U S</h1>
-        <h3>Добавить новый товар</h3>
-        <a href="{% url 'list' %}">Вернуться на главную страницу</a>
+{% extends "base.html" %}
 
-        <font color="red">
-            {% if next %}
-                {% if not user.is_staff %}
-                    <p>Ваша учетная запись не имеет доступа к этой странице. Чтобы продолжить,
-                      пожалуйста, войдите в систему используя учетную запись, которая имеет доступ.</p>
-                {% else %}
-                    <p>Please login to see this page.</p>
-                {% endif %}
+{% block content %}
+    <h3>Добавить новый товар</h3>
+
+    <font color="red">
+        {% if next %}
+            {% if not user.is_staff %}
+                <p>Ваша учетная запись не имеет доступа к этой странице. Чтобы продолжить,
+                  пожалуйста, войдите в систему используя учетную запись, которая имеет доступ.</p>
+            {% else %}
+                <p>Please login to see this page.</p>
             {% endif %}
-        </font>
+        {% endif %}
+    </font>
 
-        <form method="POST" class="order-form">
-            {% csrf_token %}
-                <table>
-                    <tr>
-                        <td><h5><b>Цвет:</b></h5></td>
-                        <td>{{ form.color }}</td>
-                    </tr>
+    <form method="POST" class="order-form">
+        {% csrf_token %}
+            <table>
+                <tr>
+                    <td><h5><b>Цвет:</b></h5></td>
+                    <td>{{ form.color }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Цена:</b></h5></td>
-                        <td>{{ form.price }}</td>
-                    </tr>
+                <tr>
+                    <td><h5><b>Цена:</b></h5></td>
+                    <td>{{ form.price }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Наличие:</b></h5></td>
-                        <td>{{ form.availability }}</td>
-                    </tr>
+                <tr>
+                    <td><h5><b>Наличие:</b></h5></td>
+                    <td>{{ form.availability }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Тип продукта:</b></h5></td>
-                        <td>{{ form.pr_type }}</td>
-                    </tr>
+                <tr>
+                    <td><h5><b>Тип продукта:</b></h5></td>
+                    <td>{{ form.pr_type }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Размер:</b></h5></td>
-                        <td>{{ form.size }}</td>
-                    </tr>
-                </table>
-            <button type="submit" class="save btn btn-default">Добавить</button>
-        </form>
-    </body>
-</html>
+                <tr>
+                    <td><h5><b>Размер:</b></h5></td>
+                    <td>{{ form.size }}</td>
+                </tr>
+            </table>
+        <button type="submit" class="save btn btn-default">Добавить</button>
+    </form>
+{% endblock %}

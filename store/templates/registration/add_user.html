@@ -1,57 +1,51 @@
-<html lang="en">
-    <head>
-        <title>NOUS - магазин</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    </head>
-    <body>
-        <h1>N O U S</h1>
-        <a href="{% url 'list' %}">Вернуться на главную страницу</a>
-        <h3>Регистрация пользователя</h3>
-        <form method="post">
-            {% csrf_token %}
-                <table>
-                    <tr>
-                      <td><h5>{{ user_form.username.label_tag }}</h5></td>
-                      <td>{{ user_form.username }}</td>
-                    </tr>
-                
-                    <tr>
-                      <td><h5>{{ user_form.password.label_tag }}</h5></td>
-                      <td>{{ user_form.password }}</td>
-                    </tr>
+{% extends "base.html" %}
 
-                    <tr>
-                        <td><h5>{{ user_form.email.label_tag }}</h5></td>
-                        <td>{{ user_form.email }}</td>
-                    </tr>
+{% block content %}
+    <h3>Регистрация пользователя</h3>
+    <form method="post">
+        {% csrf_token %}
+            <table>
+                <tr>
+                  <td><h5>{{ user_form.username.label_tag }}</h5></td>
+                  <td>{{ user_form.username }}</td>
+                </tr>
+            
+                <tr>
+                  <td><h5>{{ user_form.password.label_tag }}</h5></td>
+                  <td>{{ user_form.password }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Полное имя (ФИО):</b></h5></td>
-                        <td>{{ client_form.full_name }}</td>
-                    </tr>
+                <tr>
+                    <td><h5>{{ user_form.email.label_tag }}</h5></td>
+                    <td>{{ user_form.email }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Пол:</b></h5></td>
-                        <td>{{ client_form.gender }}</td>
-                    </tr>
+                <tr>
+                    <td><h5><b>Полное имя (ФИО):</b></h5></td>
+                    <td>{{ client_form.full_name }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Адрес:</b></h5></td>
-                        <td>{{ client_form.address }}</td>
-                    </tr>
+                <tr>
+                    <td><h5><b>Пол:</b></h5></td>
+                    <td>{{ client_form.gender }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Номер карты:</b></h5></td>
-                        <td>{{ client_form.bank_card_id }}</td>
-                    </tr>
+                <tr>
+                    <td><h5><b>Адрес:</b></h5></td>
+                    <td>{{ client_form.address }}</td>
+                </tr>
 
-                    <tr>
-                        <td><h5><b>Номер телефона:</b></h5></td>
-                        <td>{{ client_form.phone_number }}</td>
-                    </tr>
-                </table>
-            <button type="submit">Создать профиль</button>
-        </form>
-    </body>
-</html>
+                <tr>
+                    <td><h5><b>Номер карты:</b></h5></td>
+                    <td>{{ client_form.bank_card_id }}</td>
+                </tr>
+
+                <tr>
+                    <td><h5><b>Номер телефона:</b></h5></td>
+                    <td>{{ client_form.phone_number }}</td>
+                </tr>
+            </table>
+        <button type="submit">Создать профиль</button>
+    </form>
+{% endblock %}
 

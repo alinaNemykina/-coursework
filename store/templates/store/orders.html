@@ -1,27 +1,19 @@
-<html>
-    <head>
-        <title>Корзина пользователя {{ client.full_name}}</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    </head>
-    <body>
-        <h1>N O U S</h1>
-        <div>
-            <a href="{% url 'list' %}">Вернуться на главную страницу</a>
-            <h4>Корзина</h4>
-            <h4>Информация о заказах пользователя {{ client.full_name }}</h4>
-            <h5>
-                {% for o in orders %}
-                    {% for prod in products %}
-                        <div>
-                            {% if prod.id == o.prod_id.id %}
-                                Код заказа: {{o.id}}
-                                <a href="{% url 'prod_detail' pk=prod.pk %}">{{ prod }}</a>
-                                Сумма заказа: {{o.sum_total}} рублей
-                            {% endif %}
-                        </div>
-                    {% endfor %}
-                {% endfor %}
-            </h5>
-        </div>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h4>Корзина</h4>
+    <h4>Информация о заказах пользователя {{ client.full_name }}</h4>
+    <h5>
+        {% for o in orders %}
+            {% for prod in products %}
+                <div>
+                    {% if prod.id == o.prod_id.id %}
+                        Код заказа: {{o.id}}
+                        <a href="{% url 'prod_detail' pk=prod.pk %}">{{ prod }}</a>
+                        Сумма заказа: {{o.sum_total}} рублей
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endfor %}
+    </h5>
+{% endblock %}
